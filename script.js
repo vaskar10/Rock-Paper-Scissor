@@ -38,7 +38,6 @@ function generateComputerChoice(){
     let choices =["rock","paper","scissor"]
     let index = Math.floor(Math.random() * 3)
     res = choices[index]
-    console.log(res)
     computerChoice.innerHTML = res
 }
 
