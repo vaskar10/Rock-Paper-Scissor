@@ -10,15 +10,39 @@ let user;
 
 function getResult(){
     if(user === "rock" && res === "rock"){
-        displayResult = "you win"
+        displayResult = "Draw"
         
     }
     if(user === "rock" && res === "paper"){
-        displayResult = "you lost"
+        displayResult = "You loose"
         
     }
     if(user === "rock" && res === "scissor"){
-        displayResult = "you draw"
+        displayResult = "You won"
+        
+    }
+    if(user === "paper" && res === "rock"){
+        displayResult = "You won"
+        
+    }
+    if(user === "paper" && res === "paper"){
+        displayResult = "Draw"
+        
+    }
+    if(user === "paper" && res === "scissor"){
+        displayResult = "You loose"
+        
+    }
+    if(user === "scissor" && res === "rock"){
+        displayResult = "You loose"
+        
+    }
+    if(user === "scissor" && res === "paper"){
+        displayResult = "You won"
+        
+    }
+    if(user === "scissor" && res === "scissor"){
+        displayResult = "Draw"
         
     }
 
@@ -26,7 +50,7 @@ function getResult(){
     
 }
 button.forEach(element => element.addEventListener('click', (e) => {
-    let user = e.target.id
+    user = e.target.id
     userChoice.textContent = user
     console.log(user)
     generateComputerChoice()
